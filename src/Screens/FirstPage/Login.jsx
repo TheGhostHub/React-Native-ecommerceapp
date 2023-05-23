@@ -91,7 +91,6 @@ const styles = StyleSheet.create({
   },
   form: {
     width: "100%",
-    //backgroundColor: "#FFFFFF ",
     padding: 20,
     borderRadius: 10,
     justifyContent:'center',
