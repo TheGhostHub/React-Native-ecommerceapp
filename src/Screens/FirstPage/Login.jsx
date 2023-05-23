@@ -6,6 +6,7 @@ import {
   Button,
   StyleSheet,
   ImageBackground,
+  Image,
 } from "react-native";
 import { IconButton } from "@react-native-material/core";
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
@@ -42,6 +43,7 @@ const Login = () => {
         style={styles.image}
       >
         <Text style={styles.title}>Login</Text>
+        <Image style={styles.logo} source={require("../../../assets/logo.png")} />
         <View style={styles.form}>
           <TextInput
             style={styles.textInput}
@@ -70,7 +72,11 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    
+  },
+  logo:{
+    height:150,
+    width:150,
+    alignSelf:'center',
   },
   image: {
     height: "100%",
@@ -90,7 +96,6 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     justifyContent:'center',
     alignItems:'center',
-    marginTop:100,
   },
   textInput: {
     width: "100%",
