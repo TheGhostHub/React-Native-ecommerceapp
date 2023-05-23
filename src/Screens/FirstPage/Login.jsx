@@ -1,60 +1,93 @@
-import { View, Text } from 'react-native'
-import React, { useState } from 'react'
-import { Stack, TextInput, IconButton, Button } from "@react-native-material/core";
+import React, { useState } from "react";
+import { View, Text, TextInput, Button, StyleSheet } from "react-native";
+import { IconButton } from "@react-native-material/core";
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation } from "@react-navigation/native";
 
 const Login = () => {
+  const navigation = useNavigation();
 
-    const navigation = useNavigation();
+  const [password, setPassword] = useState("");
+  const [userName, setUserName] = useState("");
 
-    const [password, setPassword] = useState();
-    const [userName, setuserName] = useState();
-
-    const check = () => {
-        if (userName && password) {
-            if (userName == "Client" && password == "1234") {
-                navigation.navigate("ClientInterface")
-            }
-            else if (userName == "Admin" && password == "5678") {
-                navigation.navigate("AdminInterface")
-            }
-            else {
-                alert('Wrong connexion, try again')
-            }
-        }
-        else {
-            alert('empty')
-        }
+  const check = () => {
+    if (userName && password) {
+      if (userName === "Client" && password === "1234") {
+        navigation.navigate("ClientInterface");
+      } else if (userName === "Admin" && password === "5678") {
+        navigation.navigate("AdminInterface");
+      } else {
+        alert("Wrong connection, try again");
+      }
+    } else {
+      alert("Empty fields");
     }
+  };
 
-    return (
-        <View>
-            <Text style={{ textAlign: 'center', fontSize: 30, marginTop: '20%' }}>Login</Text>
-            <View style={{ paddingTop: '50%' }}>
-                <Stack spacing={2} style={{ margin: 16 }}>
-                    <TextInput
-                        label="UserName"
-                        variant="outlined"
-                        trailing={props => (
-                            <IconButton icon={props => <Icon name="eye" {...props} />} {...props} />
-                        )}
-                        onChangeText={(e) => setuserName(e)}
-                    />
-                    <TextInput
-                        label="Password"
-                        variant="outlined"
-                        trailing={props => (
-                            <IconButton icon={props => <Icon name="eye" {...props} />} {...props} />
-                        )}
-                        onChangeText={(e) => setPassword(e)}
-                    />
-                    <Button
-                        title='Login' onPress={() => check()} />
-                </Stack>
-            </View>
+  const togglePasswordVisibility = () => {
+    setHidePassword(!hidePassword);
+  };
+
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>Login</Text>
+      <View style={styles.form}>
+        <TextInput
+          style={styles.textInput}
+          placeholder="UserName"
+          onChangeText={setUserName}
+        />
+
+        <TextInput
+          style={styles.textInput}
+          placeholder="Password"
+          secureTextEntry={true}
+          onChangeText={setPassword}
+        />
+
+        <View style={styles.btnContainer}>
+          <Button title="Login" onPress={check} />
         </View>
-    )
-}
+      </View>
+    </View>
+  );
+};
 
-export default Login
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#f555f5",
+  },
+  title: {
+    fontSize: 30,
+    fontWeight: "bold",
+    marginBottom: 50,
+  },
+  form: {
+    width: "100%",
+    backgroundColor: "#f515f5",
+    padding: 20,
+    borderRadius: 10,
+  },
+  textInput: {
+    width: "100%",
+    height: 40,
+    borderColor: "gray",
+    borderWidth: 1,
+    borderRadius: 20,
+    marginTop: 20,
+    paddingHorizontal: 10,
+  },
+
+  icon: {
+    paddingRight: 8,
+  },
+  btnContainer: {
+    marginTop: 20,
+    width: "100%",
+  },
+});
+
+export default Login;
