@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, Button, StyleSheet } from "react-native";
+import {
+  View,
+  Text,
+  TextInput,
+  Button,
+  StyleSheet,
+  ImageBackground,
+} from "react-native";
 import { IconButton } from "@react-native-material/core";
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 import { useNavigation } from "@react-navigation/native";
@@ -30,25 +37,30 @@ const Login = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Login</Text>
-      <View style={styles.form}>
-        <TextInput
-          style={styles.textInput}
-          placeholder="UserName"
-          onChangeText={setUserName}
-        />
+      <ImageBackground
+        source={require("../../../assets/loginback.png")}
+        style={styles.image}
+      >
+        <Text style={styles.title}>Login</Text>
+        <View style={styles.form}>
+          <TextInput
+            style={styles.textInput}
+            placeholder="UserName"
+            onChangeText={setUserName}
+          />
 
-        <TextInput
-          style={styles.textInput}
-          placeholder="Password"
-          secureTextEntry={true}
-          onChangeText={setPassword}
-        />
+          <TextInput
+            style={styles.textInput}
+            placeholder="Password"
+            secureTextEntry={true}
+            onChangeText={setPassword}
+          />
 
-        <View style={styles.btnContainer}>
-          <Button title="Login" onPress={check} />
+          <View style={styles.btnContainer}>
+            <Button title="Login" onPress={check} />
+          </View>
         </View>
-      </View>
+      </ImageBackground>
     </View>
   );
 };
@@ -58,18 +70,28 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#f555f5",
+    
+  },
+  image: {
+    height: "100%",
+    width: "100%",
   },
   title: {
-    fontSize: 30,
+    fontSize: 50,
     fontWeight: "bold",
     marginBottom: 50,
+    alignSelf:'center',
+    color:"white",
+    marginTop:100,
   },
   form: {
     width: "100%",
-    backgroundColor: "#f515f5",
+    //backgroundColor: "#FFFFFF ",
     padding: 20,
     borderRadius: 10,
+    justifyContent:'center',
+    alignItems:'center',
+    marginTop:100,
   },
   textInput: {
     width: "100%",
@@ -87,6 +109,8 @@ const styles = StyleSheet.create({
   btnContainer: {
     marginTop: 20,
     width: "100%",
+    borderRadius:10,
+
   },
 });
 
