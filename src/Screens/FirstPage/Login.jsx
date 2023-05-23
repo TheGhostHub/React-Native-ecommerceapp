@@ -77,11 +77,10 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   title: {
-    fontSize: 50,
+    fontSize: 70,
     fontWeight: "bold",
-    marginBottom: 50,
     alignSelf:'center',
-    color:"white",
+    color:"black",
     marginTop:100,
   },
   form: {
