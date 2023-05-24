@@ -1,61 +1,142 @@
-[{
+[
+  {
     "id": 1,
     "picture": "https://i.ebayimg.com/images/g/FacAAOSwj7pkbTBp/s-l500.jpg",
     "price": 149.99,
     "name": "bike shoe Men's",
     "release_date": "2023-01-15"
-}, {
+  },
+  {
     "id": 2,
     "picture": "https://i.ebayimg.com/images/g/FqsAAOSwyhVkbTBr/s-l1600.jpg",
     "price": 199.99,
     "name": "adidas Originals Kaptir 2.0 Shoes Men's",
     "release_date": "2022-02-28"
-}, {
+  },
+  {
     "id": 3,
     "picture": "https://cdn.shopify.com/s/files/1/0451/2848/2979/products/88722503076616.jpg?v=1675076101",
     "price": 99.99,
     "name": "NIKE Men SIZE 11-BLACK/WHITE-VIALE Pair of Shoes",
     "release_date": "2022-03-10"
-}, {
+  },
+  {
     "id": 4,
     "picture": "https://i.ebayimg.com/images/g/AQEAAOSwEkpjjwgf/s-l1600.jpg",
     "price": 249.99,
     "name": "Men's Blade Running Shoes Tide Autumn Breathable Thin Models Of Mesh Sports Shoe",
     "release_date": "2022-04-02"
-}, {
+  },
+  {
     "id": 5,
     "picture": "https://i.ebayimg.com/images/g/75QAAOSwyqBka6Lr/s-l1600.jpg",
     "price": 79.99,
     "name": "adidas TERREX Trailrider Trail Running Shoes Men's",
     "release_date": "2022-05-20"
-}, {
+  },
+  {
     "id": 6,
     "picture": "https://i.ebayimg.com/images/g/UnYAAOSwLclkQzT6/s-l1600.jpg",
     "price": 299.99,
     "name": "PUMA Men's Viz Runner Repeat Running Sneakers",
     "release_date": "2022-06-11"
-}, {
+  },
+  {
     "id": 7,
     "picture": "https://i.ebayimg.com/images/g/~p4AAOSwzl1ka6Lt/s-l1600.jpg",
     "price": 119.99,
     "name": "adidas Originals Ultraboost 1.0 DNA Running Shoes Men's",
     "release_date": "2022-07-01"
-}, {
+  },
+  {
     "id": 8,
     "picture": "https://i.ebayimg.com/images/g/83MAAOSwb3hkWVwv/s-l1600.jpg",
     "price": 179.99,
     "name": "Reebok Flexagon Force 3 Wide 4E Men's Training Shoes",
     "release_date": "2022-08-15"
-}, {
+  },
+  {
     "id": 9,
     "picture": "https://i.ebayimg.com/images/g/2ZQAAOSwGqpkZlg1/s-l1600.jpg",
     "price": 69.99,
     "name": "adidas Postmove Mid Shoes Men's",
     "release_date": "2022-09-03"
-}, {
+  },
+  {
     "id": 10,
     "picture": "https://i.ebayimg.com/images/g/2s4AAOSwuCRkZlg2/s-l1600.jpg",
     "price": 399.99,
-    "name": "adidas TERREX Free Hiker 2 GORE-TEX Hiking Shoe Men's",
-    "release_date": "2022-10-22"
-}]
+    "name": "Reebok NFX Men's Training Shoes",
+    "release_date": "2022-05-22"
+  },
+  {
+    "id": 11,
+    "picture": "https://i.ebayimg.com/images/g/NmoAAOSwG0NjGR~R/s-l500.jpg",
+    "price": 31.99,
+    "name": "PUMA Men's Redon Bungee Shoes",
+    "release_date": "2022-10-30"
+  },
+  {
+    "id": 12,
+    "picture": "https://i.ebayimg.com/images/g/NIwAAOSws~pkWWLJ/s-l1600.jpg",
+    "price": 99.99,
+    "name": "Reebok Fluxlite Men's Training Shoes",
+    "release_date": "2022-10-28"
+  },
+  {
+    "id": 13,
+    "picture": "https://i.ebayimg.com/images/g/ZXAAAOSwvzxjvunF/s-l500.jpg",
+    "price": 208.99,
+    "name": "Nike Air Force 1 Custom Shoes Black Shoes",
+    "release_date": "2022-11-22"
+  },
+  {
+    "id": 14,
+    "picture": "https://i.ebayimg.com/images/g/Xm0AAOSwXv9kWWLp/s-l1600.jpg",
+    "price": 69.99,
+    "name": "Reebok NPC II Men's Shoes",
+    "release_date": "2023-02-22"
+  },
+  {
+    "id": 15,
+    "picture": "https://i.ebayimg.com/images/g/~X0AAOSw3ztkH5K4/s-l1600.jpg",
+    "price": 25.99,
+    "name": "Men's Casual Shoes Lightweight Breathable Men Shoes",
+    "release_date": "2022-06-2"
+  },
+  {
+    "id": 16,
+    "picture": "https://i.ebayimg.com/images/g/53kAAOSwyt9j8tHk/s-l500.jpg",
+    "price": 64.99,
+    "name": "adidas Samba OG Mens Originals Shoes",
+    "release_date": "2022-08-06"
+  },
+  {
+    "id": 17,
+    "picture": "https://i.ebayimg.com/images/g/AR8AAOSwrNRkXSkT/s-l500.jpg",
+    "price": 38.99,
+    "name": "PUMA Men's SOFTRIDE One4All Running Shoes",
+    "release_date": "2022-07-22"
+  },
+  {
+    "id": 18,
+    "picture": "https://i.ebayimg.com/images/g/jA4AAOSwK2RkZCi7/s-l1600.jpg",
+    "price": 46.99,
+    "name": "PUMA Men's Axelion Training Shoes",
+    "release_date": "2022-06-07"
+  },
+  {
+    "id": 19,
+    "picture": "https://i.ebayimg.com/images/g/RNUAAOSwRZ5kbKDU/s-l500.jpg",
+    "price": 42.99,
+    "name": "Reebok Men's Rewind Run Shoes",
+    "release_date": "2022-09-22"
+  },
+  {
+    "id": 20,
+    "picture": "https://i.ebayimg.com/images/g/YEcAAOSws5FkXNBG/s-l500.jpg",
+    "price": 50.99,
+    "name": "Reebok Workout Plus Men's Shoes",
+    "release_date": "2022-08-23"
+  }
+]

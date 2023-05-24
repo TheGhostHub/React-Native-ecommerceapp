@@ -43,7 +43,10 @@ const Login = () => {
         style={styles.image}
       >
         <Text style={styles.title}>Login</Text>
-        <Image style={styles.logo} source={require("../../../assets/logo.png")} />
+        <Image
+          style={styles.logo}
+          source={require("../../../assets/logo.png")}
+        />
         <View style={styles.form}>
           <TextInput
             style={styles.textInput}
@@ -73,10 +76,10 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-  logo:{
-    height:150,
-    width:150,
-    alignSelf:'center',
+  logo: {
+    height: 150,
+    width: 150,
+    alignSelf: "center",
   },
   image: {
     height: "100%",
@@ -85,16 +88,16 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 70,
     fontWeight: "bold",
-    alignSelf:'center',
-    color:"black",
-    marginTop:100,
+    alignSelf: "center",
+    color: "black",
+    marginTop: 100,
   },
   form: {
     width: "100%",
     padding: 20,
     borderRadius: 10,
-    justifyContent:'center',
-    alignItems:'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
   textInput: {
     width: "100%",
@@ -112,8 +115,7 @@ const styles = StyleSheet.create({
   btnContainer: {
     marginTop: 20,
     width: "100%",
-    borderRadius:10,
-
+    borderRadius: 10,
   },
 });
 
