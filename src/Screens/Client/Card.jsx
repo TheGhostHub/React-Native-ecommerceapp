@@ -1,12 +1,10 @@
-import { View, FlatList, StyleSheet } from 'react-native'
+import { View, FlatList, StyleSheet, ScrollView } from 'react-native'
 import React from 'react'
 import { useContext } from 'react'
 import { StoreContext } from '../../Context/StoreContext'
 import ItemCard from '../../Components/Client/ItemCard'
 import { Text, Button } from "@react-native-material/core";
 import Ionicons from 'react-native-vector-icons/Ionicons';
-
-
 
 const Card = () => {
   const { basket, totalPrice, setPurchaseHistory, setBasket, setNbrsProductbag, setTotalPrice, setNbrsPurchaseHistory, nbrsProductsBag, dateTime, RandomOrderNumber } = useContext(StoreContext);
@@ -17,13 +15,14 @@ const Card = () => {
     setNbrsProductbag(0) // tab icon = 0
     setTotalPrice(0) // total price text into Card components = 0
     dateTime();
-    alert('paiement successfuly')
+    alert('Payment successful')
   }
-  return (
-    <View>
-      {totalPrice == 0 ? '' : <Text style={styles.center}>Total :{totalPrice}</Text>}
 
-      {basket.length != 0 ?
+  return (
+    <ScrollView contentContainerStyle={styles.container}>
+      {totalPrice == 0 ? null : <Text style={styles.center}>Total: {totalPrice}</Text>}
+
+      {basket.length != 0 ? (
         <View style={styles.pd}>
           <FlatList
             data={basket}
@@ -33,36 +32,46 @@ const Card = () => {
           <Button
             variant="contained"
             color='primary'
-            title="payment"
+            title="Payment"
             style={styles.btn}
             onPress={paiement}
-          >
-          </Button>
+          />
         </View>
-        :
-        <Text style={styles.msgEmpty}>Empty Bag <Ionicons name="cart" size={30}></Ionicons></Text>
-      }
-    </View>
+      ) : (
+        <View style={styles.emptyContainer}>
+          <Text style={styles.msgEmpty}>Empty Bag</Text>
+          <Ionicons name="cart" size={30} />
+        </View>
+      )}
+    </ScrollView>
   )
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flexGrow: 1,
+    backgroundColor: '#1ABB00',
+  },
   center: {
     fontSize: 20,
-    textAlign: 'center'
-
+    textAlign: 'center',
+    marginTop: 20,
   },
   btn: {
     padding: 5,
   },
-
-  pd:{
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
+  pd: {
+    backgroundColor: '#C4DFDF',
   },
-  msgEmpty:{textAlign:'center',fontSize:28,paddingTop:250}
-
+  emptyContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  msgEmpty: {
+    fontSize: 28,
+    paddingBottom: 10,
+  },
 })
+
 export default Card
