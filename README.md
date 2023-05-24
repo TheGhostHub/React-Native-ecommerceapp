@@ -10,7 +10,7 @@ The app was built using React Native, a technology that allows developing mobile
 
 
 
-<img width="922" alt="Capture d’écran 2023-04-15 à 22 41 32" src="">
+<img width="922" alt="Grop project" src="">
 
  
  
