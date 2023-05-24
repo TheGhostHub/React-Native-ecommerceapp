@@ -1,5 +1,5 @@
 import { NavigationContainer } from '@react-navigation/native';
-import { StyleSheet } from 'react-native';
+import { StyleSheet,View } from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import StoreContextProvider, { StoreContext } from './src/Context/StoreContext'
@@ -24,9 +24,9 @@ const Stack = createNativeStackNavigator()
 export default function App() {
 
   return (
-    <StoreContextProvider>
-      <NavigationContainer>
-        <Stack.Navigator  screenOptions={{headerShown: false}}>
+    <StoreContextProvider >
+      <NavigationContainer >
+        <Stack.Navigator  screenOptions={{headerShown: false}} >
           <Stack.Screen  name="Login" component={Login}/>
           <Stack.Screen name="ClientInterface" component={ClientInterface}/>
           <Stack.Screen name="AdminInterface" component={AdminInterface}/>
@@ -41,7 +41,7 @@ export default function App() {
 export const ClientInterface = () => {
   const {nbrsProductsBag} = useContext(StoreContext)
   return (
-      <Tab.Navigator screenOptions={({ route }) => ({
+      <Tab.Navigator  screenOptions={({ route }) => ({
         tabBarIcon: ({ focused, color, size }) => {
           let iconName;
 
@@ -51,7 +51,7 @@ export const ClientInterface = () => {
               : 'ios-cart-outline';
           } else if (route.name === 'Card') {
             iconName = focused ? 'ios-card' : 'ios-card-outline';
-          } else if (route.name === 'Profil' ){
+          } else if (route.name === 'Profile' ){
             iconName = focused ? 'ios-person-circle' : 'ios-person-circle-outline';
           }
 
@@ -60,11 +60,13 @@ export const ClientInterface = () => {
         },
         tabBarActiveTintColor: 'blue',
         tabBarInactiveTintColor: 'black',
+        
       })}>
         <Tab.Screen name="Store" component={ClientBye} />
         <Tab.Screen options={{ tabBarBadge: nbrsProductsBag }} name="Card" component={Card} />
-        <Tab.Screen name="Profil" component={Profil} />
+        <Tab.Screen name="Profile" component={Profil} />
       </Tab.Navigator>
+      
   );
 };
 // ADMIN
@@ -91,6 +93,7 @@ export const AdminInterface = () => {
         },
         tabBarActiveTintColor: 'blue',
         tabBarInactiveTintColor: 'black',
+        
       })}>
         <Tab.Screen name="Received" options={{ tabBarBadge: received.length }} component={Received} />
         <Tab.Screen name="Closed" options={{ tabBarBadge:allClosed.length }} component={Closed} />
@@ -113,7 +116,7 @@ export const ClientBye = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#251B37',
     alignItems: 'center',
     justifyContent: 'center',
   },

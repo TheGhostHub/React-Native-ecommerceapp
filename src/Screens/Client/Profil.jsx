@@ -10,7 +10,7 @@ const Profil = () => {
         <Stack center spacing={6}>
           <Avatar label="Sacha Foucard" color='grey' />
         </Stack>
-        <Text style={styles.name}>Sacha Foucard, Herzelia</Text>
+        <Text style={styles.name}>Welcome to profile</Text>
         <Text style={styles.name}>Purchase History</Text>
       </View>
       <View>
