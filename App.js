@@ -95,9 +95,14 @@ export const AdminInterface = () => {
           // You can return any component that you like here!
           return <Ionicons name={iconName} size={size} color={color} />;
         },
-        tabBarActiveTintColor: "blue",
-        tabBarInactiveTintColor: "black",
       })}
+      tabBarOptions={{
+        activeTintColor: "yellow",
+        inactiveTintColor: "white",
+        tabStyle: {
+          backgroundColor: "black",
+        },
+      }}
     >
       <Tab.Screen
         name="Received"
@@ -117,6 +122,7 @@ export const AdminInterface = () => {
     </Tab.Navigator>
   );
 };
+
 // CLIENT SCREEN ALL PRODUCT (STORE) && SCREEN CLICK ON PRODUCT ZOOM (CartItem)
 export const ClientBye = () => {
   return (

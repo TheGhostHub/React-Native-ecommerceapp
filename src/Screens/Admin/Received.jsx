@@ -60,7 +60,7 @@ const Received = () => {
                 style={styles.button}
                 onPress={() => ToPrepare(item.ordNo)}
               >
-                <Text style={styles.text}>ready to prepare</Text>
+                <Text style={styles.text}>READY TO PREPARE</Text>
               </Pressable>
             </TouchableOpacity>
           )}
