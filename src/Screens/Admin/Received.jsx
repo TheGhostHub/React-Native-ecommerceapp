@@ -55,7 +55,7 @@ const Received = () => {
               <Text style={styles.details}>ORDER NO:{item.ordNo}</Text>
               <Text style={styles.details}>QUANTITY:{item.option}</Text>
               <Text style={styles.details}>SHIPPED DATE:{dateTime()}</Text>
-          
+
               <Pressable
                 style={styles.button}
                 onPress={() => ToPrepare(item.ordNo)}
@@ -77,8 +77,17 @@ const styles = StyleSheet.create({
     borderColor: "black",
     backgroundColor: "white",
     borderRadius: 20,
+    alignContent:'center',
+    alignSelf:'center',
+    justifyContent:'center',
   },
-  img: { width: 80, height: 80 },
+  img: {
+    width: 80,
+    height: 80,
+    alignSelf:'center',
+    marginTop:8,
+    borderRadius:10,
+  },
   more: {
     textAlign: "center",
     position: "absolute",
@@ -87,25 +96,25 @@ const styles = StyleSheet.create({
     fontSize: 20,
   },
   title: { fontSize: 20, textAlign: "center" },
-  details: { color: "black",textAlign: "center"  },
+  details: { color: "black", textAlign: "center" },
   msgEmpty: { textAlign: "center", fontSize: 28, paddingTop: 150 },
   button: {
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
     paddingVertical: 12,
     paddingHorizontal: 32,
     borderRadius: 4,
     elevation: 3,
-    backgroundColor: 'black',
-    borderBottomRightRadius:20,
-    borderBottomLeftRadius:20,
+    backgroundColor: "black",
+    borderBottomRightRadius: 20,
+    borderBottomLeftRadius: 20,
   },
   text: {
     fontSize: 16,
     lineHeight: 21,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     letterSpacing: 0.25,
-    color: 'white',
+    color: "white",
   },
 });
 export default Received;
