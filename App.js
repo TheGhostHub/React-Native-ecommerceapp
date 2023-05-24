@@ -60,7 +60,7 @@ export const ClientInterface = () => {
         activeTintColor: "yellow",
         inactiveTintColor: "white",
         tabStyle: {
-          backgroundColor: "black",
+          backgroundColor: "green",
         },
       }}
     >
