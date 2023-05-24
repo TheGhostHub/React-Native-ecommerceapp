@@ -4,6 +4,7 @@ import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 import { useContext } from 'react';
 import { StoreContext } from '../../Context/StoreContext';
 import { useRoute } from '@react-navigation/native';
+import { ScrollView } from 'react-native';
 
 const CartItem = () => {
   const { data, setBasket, setNbrsProductbag,nbrsProductsBag,setTotalPrice,totalPrice } = useContext(StoreContext);
@@ -18,6 +19,7 @@ const CartItem = () => {
   }
 
   return (
+    <ScrollView>
     <View style={styles.box}>
       <Image
         source={{ uri: picture }}
@@ -30,6 +32,7 @@ const CartItem = () => {
         trailing={props => <Icon name="basket" {...props} />}
       />
     </View>
+    </ScrollView>
   )
 }
 
