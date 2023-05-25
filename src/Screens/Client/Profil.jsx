@@ -1,12 +1,13 @@
-import { View, StyleSheet, FlatList } from 'react-native'
+import { View, StyleSheet, FlatList ,ScrollView} from 'react-native'
 import { Avatar, Stack, Text } from "@react-native-material/core";
 import ItemProfilCard from '../../Components/Client/ItemProfilCard';
 
 const Profil = () => {
 
   return (
-    <View>
-      <View style={{ marginTop: 20 }}>
+    
+    <ScrollView contentContainerStyle={styles.container}>
+      <View style={{ marginTop: 20}}>
         <Stack center spacing={6}>
           <Avatar label="Sacha Foucard" color='grey' />
         </Stack>
@@ -16,10 +17,14 @@ const Profil = () => {
       <View>
        <ItemProfilCard/>
       </View>
-    </View>
+    </ScrollView>
   )
 }
 const styles = StyleSheet.create({
+  container: {
+    flexGrow: 1,
+    backgroundColor: '#1ABB00',
+  },
   name: {
     textAlign: 'center',
     marginTop: 20

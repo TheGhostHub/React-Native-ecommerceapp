@@ -142,8 +142,16 @@ export const AdminInterface = () => {
         },
       })}
       tabBarOptions={{
+<<<<<<< HEAD
         tabBarActiveTintColor: "blue",
         tabBarInactiveTintColor: "black",
+=======
+        activeTintColor: "yellow",
+        inactiveTintColor: "white",
+        tabStyle: {
+          backgroundColor: "black",
+        },
+>>>>>>> c2f62b5df61d84ddaed40d3238d231126caa8609
       }}
     >
       <Tab.Screen
@@ -164,6 +172,7 @@ export const AdminInterface = () => {
     </Tab.Navigator>
   );
 };
+
 // CLIENT SCREEN ALL PRODUCT (STORE) && SCREEN CLICK ON PRODUCT ZOOM (CartItem)
 export const ClientBye = () => {
   return (
