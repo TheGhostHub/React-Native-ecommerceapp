@@ -142,16 +142,11 @@ export const AdminInterface = () => {
         },
       })}
       tabBarOptions={{
-<<<<<<< HEAD
-        tabBarActiveTintColor: "blue",
-        tabBarInactiveTintColor: "black",
-=======
         activeTintColor: "yellow",
         inactiveTintColor: "white",
         tabStyle: {
           backgroundColor: "black",
         },
->>>>>>> c2f62b5df61d84ddaed40d3238d231126caa8609
       }}
     >
       <Tab.Screen
