@@ -88,6 +88,7 @@ export const ClientInterface = () => {
             height: 50, // Set custom header height
             backgroundColor: "#212A3E", // Set custom background color for the header
           },
+          tabBarBadge: nbrsProductsBag,
           headerTitleStyle: {
             color: "white",
             fontSize: 25,
