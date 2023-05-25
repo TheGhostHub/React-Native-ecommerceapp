@@ -1,4 +1,10 @@
-import { View, FlatList, StyleSheet, ScrollView } from "react-native";
+import {
+  View,
+  FlatList,
+  StyleSheet,
+  ScrollView,
+  Pressable,
+} from "react-native";
 import React from "react";
 import { useContext } from "react";
 import { StoreContext } from "../../Context/StoreContext";
@@ -45,13 +51,10 @@ const Card = () => {
             renderItem={({ item }) => <ItemCard {...item} />}
             keyExtractor={(item) => item.id}
           />
-          <Button
-            variant="contained"
-            color="primary"
-            title="Payment"
-            style={styles.btn}
-            onPress={paiement}
-          />
+
+          <Pressable style={styles.button} onPress={paiement}>
+            <Text style={styles.text}>PAYMENT</Text>
+          </Pressable>
         </View>
       ) : (
         <View style={styles.emptyContainer}>
@@ -73,11 +76,28 @@ const styles = StyleSheet.create({
     textAlign: "center",
     marginTop: 20,
   },
-  btn: {
-    padding: 5,
+  button: {
+    alignItems: "center",
+    justifyContent: "center",
+    paddingVertical: 12,
+    paddingHorizontal: 32,
+    elevation: 3,
+    backgroundColor: "black",
+    borderBottomRightRadius: 20,
+    borderBottomLeftRadius: 20,
+  },
+  text: {
+    fontSize: 16,
+    lineHeight: 21,
+    fontWeight: "bold",
+    letterSpacing: 0.25,
+    color: "white",
   },
   pd: {
     backgroundColor: "#C4DFDF",
+    width: "90%",
+    alignSelf: "center",
+    borderRadius: 20,
   },
   emptyContainer: {
     flex: 1,
