@@ -146,23 +146,59 @@ export const AdminInterface = () => {
         activeTintColor: "yellow",
         inactiveTintColor: "white",
         tabStyle: {
-          backgroundColor: "black",
+          backgroundColor: "#212A3E",
         },
       }}
     >
       <Tab.Screen
         name="Received"
-        options={{ tabBarBadge: received.length }}
+        options={{
+          tabBarBadge: received.length,
+          headerStyle: {
+            height: 50, // Set custom header height
+            backgroundColor: "#212A3E", // Set custom background color for the header
+          },
+          headerTitleStyle: {
+            color: "white",
+            fontSize: 25,
+          },
+          headerTintColor: "white",
+          headerTitleAlign: "center",
+        }}
         component={Received}
       />
       <Tab.Screen
         name="Closed"
-        options={{ tabBarBadge: allClosed.length }}
+        options={{
+          tabBarBadge: allClosed.length,
+          headerStyle: {
+            height: 50, // Set custom header height
+            backgroundColor: "#212A3E", // Set custom background color for the header
+          },
+          headerTitleStyle: {
+            color: "white",
+            fontSize: 25,
+          },
+          headerTintColor: "white",
+          headerTitleAlign: "center",
+        }}
         component={Closed}
       />
       <Tab.Screen
         name="Packed"
-        options={{ tabBarBadge: packed.length }}
+        options={{
+          tabBarBadge: packed.length,
+          headerStyle: {
+            height: 50, // Set custom header height
+            backgroundColor: "#212A3E", // Set custom background color for the header
+          },
+          headerTitleStyle: {
+            color: "white",
+            fontSize: 25,
+          },
+          headerTintColor: "white",
+          headerTitleAlign: "center",
+        }}
         component={Packed}
       />
     </Tab.Navigator>
