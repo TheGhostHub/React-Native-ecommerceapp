@@ -1,5 +1,5 @@
 import { NavigationContainer } from "@react-navigation/native";
-import { StyleSheet } from "react-native";
+import { StyleSheet, StatusBar } from "react-native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import StoreContextProvider, { StoreContext } from "./src/Context/StoreContext";
@@ -23,6 +23,7 @@ export default function App() {
   return (
     <StoreContextProvider>
       <NavigationContainer>
+        <StatusBar backgroundColor="#212A3E" />
         <Stack.Navigator screenOptions={{ headerShown: false }}>
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="ClientInterface" component={ClientInterface} />
@@ -60,17 +61,61 @@ export const ClientInterface = () => {
         activeTintColor: "yellow",
         inactiveTintColor: "white",
         tabStyle: {
-          backgroundColor: "black",
+          backgroundColor: "#212A3E",
         },
       }}
     >
-      <Tab.Screen name="Store" component={ClientBye} />
       <Tab.Screen
-        options={{ tabBarBadge: nbrsProductsBag }}
+        name="Store"
+        component={ClientBye}
+        options={{
+          headerStyle: {
+            height: 50, // Set custom header height
+            backgroundColor: "#212A3E", // Set custom background color for the header
+          },
+          headerTitleStyle: {
+            color: "white",
+            fontSize: 25,
+          },
+          headerTintColor: "white",
+          headerTitleAlign: "center",
+          headerTitle: "Store",
+        }}
+      />
+      <Tab.Screen
+        options={{
+          headerStyle: {
+            height: 50, // Set custom header height
+            backgroundColor: "#212A3E", // Set custom background color for the header
+          },
+          headerTitleStyle: {
+            color: "white",
+            fontSize: 25,
+          },
+          headerTintColor: "white",
+          headerTitleAlign: "center",
+          headerTitle: "Card",
+        }}
         name="Card"
         component={Card}
       />
-      <Tab.Screen name="Profile" component={Profil} />
+      <Tab.Screen
+        name="Profile"
+        component={Profil}
+        options={{
+          headerStyle: {
+            height: 50, // Set custom header height
+            backgroundColor: "#212A3E", // Set custom background color for the header
+          },
+          headerTitleStyle: {
+            color: "white",
+            fontSize: 25,
+          },
+          headerTintColor: "white",
+          headerTitleAlign: "center",
+          headerTitle: "Profile",
+        }}
+      />
     </Tab.Navigator>
   );
 };
@@ -95,9 +140,11 @@ export const AdminInterface = () => {
           // You can return any component that you like here!
           return <Ionicons name={iconName} size={size} color={color} />;
         },
+      })}
+      tabBarOptions={{
         tabBarActiveTintColor: "blue",
         tabBarInactiveTintColor: "black",
-      })}
+      }}
     >
       <Tab.Screen
         name="Received"

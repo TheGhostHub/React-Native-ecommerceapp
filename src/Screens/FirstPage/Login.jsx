@@ -7,6 +7,7 @@ import {
   StyleSheet,
   ImageBackground,
   Image,
+  TouchableOpacity,
 } from "react-native";
 import { IconButton } from "@react-native-material/core";
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
@@ -61,9 +62,12 @@ const Login = () => {
             onChangeText={setPassword}
           />
 
-          <View style={styles.btnContainer}>
+          {/* <View style={styles.btnContainer}>
             <Button title="Login" onPress={check} />
-          </View>
+          </View> */}
+          <TouchableOpacity style={styles.btnContainer} onPress={check}>
+            <Text style={styles.btnText}>Login</Text>
+          </TouchableOpacity>
         </View>
       </ImageBackground>
     </View>
@@ -115,7 +119,16 @@ const styles = StyleSheet.create({
   btnContainer: {
     marginTop: 20,
     width: "100%",
-    borderRadius: 10,
+    borderRadius: 30,
+    backgroundColor: "#212A3E",
+    padding: 15,
+    marginTop: 15,
+    alignItems: "center",
+  },
+  btnText: {
+    color: "white",
+    fontSize: 18,
+    fontWeight: "bold",
   },
 });
 

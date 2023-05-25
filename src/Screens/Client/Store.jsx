@@ -11,7 +11,7 @@ const Store = () => {
       data={data}
       renderItem={({ item }) => <Item {...item} />}
       keyExtractor={(item) => item.id}
-      style={{ backgroundColor: "#1ABB00" }}
+      style={{ backgroundColor: "#F1F6F9" }}
     />
   );
 };
