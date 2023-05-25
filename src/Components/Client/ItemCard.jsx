@@ -16,7 +16,7 @@ const ItemCard = ({ name, picture, price, id, release_date }) => {
       <TouchableOpacity onPress={() => ClickImg()}>
         <Image source={{ uri: picture }} style={styles.img} />
       </TouchableOpacity>
-      <Text color="gold">New</Text>
+      {/* <Text color="gold">New</Text> */}
       <Text style={styles.name}>{name}</Text>
       <Text style={styles.price}>$ {price}</Text>
     </View>
@@ -27,27 +27,30 @@ const styles = StyleSheet.create({
   container: {
     flex: 0.5, // set to 0.5 to show 2 items in the same line
     padding: 10,
+    margin:10,
     alignItems: 'center',
-    paddingBottom: 40,
-    flexDirection: 'row' // added to show 2 items in the same line
+    flexDirection: 'column' // added to show 2 items in the same line
   },
   img: {
-    width: 100,
+    width: 250,
     height: 150,
-    margin: 'auto'
+    resizeMode:'center',
+    margin: 'auto',
+    borderRadius:10,
   },
   name: {
-    fontSize: 14,
-    maxWidth: 150,
+    fontSize: 16,
+    maxWidth: 250,
     textAlign: 'center',
-    marginTop: 30
+    marginTop: 10,
   },
   price: {
     fontSize: 12,
     maxWidth: 150,
     textAlign: 'center',
     color: '#524b48',
-    lineHeight: 50
+    fontWeight:'bold',
+  
   }
 })
 
