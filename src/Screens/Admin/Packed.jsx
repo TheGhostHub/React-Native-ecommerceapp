@@ -33,9 +33,9 @@ const Packed = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>
+      {/* <Text style={styles.title}>
         Packed <Ionicons name="cube-outline" size={30} color="black" />
-      </Text>
+      </Text> */}
 
       {packed.length == 0 ? (
         <Text style={styles.msgEmpty}>No orders packed.</Text>
@@ -65,7 +65,9 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   border: {
+    width:'90%',
     margin: 10,
+    padding:10,
     borderWidth: 0.5,
     borderColor: "black",
     backgroundColor: "white",

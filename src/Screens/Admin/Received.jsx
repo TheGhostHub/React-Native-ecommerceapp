@@ -30,9 +30,9 @@ const Received = () => {
 
   return (
     <View>
-      <Text style={styles.title}>
+      {/* <Text style={styles.title}>
         Received <Ionicons name="send-outline" size={30}></Ionicons>
-      </Text>
+      </Text> */}
 
       {received.length == 0 ? (
         <Text style={styles.msgEmpty}>No order has get</Text>
@@ -72,7 +72,9 @@ const Received = () => {
 };
 const styles = StyleSheet.create({
   border: {
+    width:'90%',
     margin: 10,
+    padding:10,
     borderWidth: 0.5,
     borderColor: "black",
     backgroundColor: "white",
@@ -103,7 +105,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     paddingVertical: 12,
     paddingHorizontal: 32,
-    borderRadius: 4,
     elevation: 3,
     backgroundColor: "black",
     borderBottomRightRadius: 20,
