@@ -41,9 +41,9 @@ const Closed = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>
+      {/* <Text style={styles.title}>
         Closed <Ionicons name="archive-outline" size={30}></Ionicons>
-      </Text>
+      </Text> */}
       {allClosed.length == 0 ? (
         <Text style={styles.msgEmpty}>No closed orders.</Text>
       ) : (
@@ -78,7 +78,9 @@ const Closed = () => {
 const styles = StyleSheet.create({
   container: { flex: 1 },
   border: {
+    width:'90%',
     margin: 10,
+    padding:10,
     borderWidth: 0.5,
     borderColor: "black",
     backgroundColor: "white",
