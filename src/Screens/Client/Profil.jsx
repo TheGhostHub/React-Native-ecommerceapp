@@ -11,7 +11,7 @@ const Profil = () => {
         <Stack center spacing={6}>
           <Avatar label="Sacha Foucard" color='grey' />
         </Stack>
-        <Text style={styles.name}>Sacha Foucard, Herzelia</Text>
+        <Text style={styles.name}>Welcome</Text>
         <Text style={styles.name}>Purchase History</Text>
       </View>
       <View>
@@ -23,7 +23,7 @@ const Profil = () => {
 const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
-    backgroundColor: '#1ABB00',
+    backgroundColor: '#F1F6F9',
   },
   name: {
     textAlign: 'center',
